@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Bednarcik</title>
+    <link rel="stylesheet" href="blog-styles.css"> <!-- Link to your CSS file for styling -->
+    <!-- Add any CSS links or stylesheets here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Nav -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" id="navbar__logo"><img src="assets/logo-no-background.png" alt="Icon"></a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="about.html" class="navbar__links">About</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="directory.html" class="navbar__links">Work</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <article>
+        <h1>An Analysis of SPY Short Puts</h1>
+        <h2>Examining Expected Return and Standard Deviation of Returns</h2>
+        <h3>Introduction</h3>
+        <p> In this article we explore the historical performance of short puts in one of the most liquid
+            options markets, SPY, through the lens of average daily return and standard deviation of daily returns. 
+        </p>
+        <h3>Methodology</h3>
+        <p> Data for the monthly expiration one standard deviation put
+            between 30 and 60 days to expiration is aggregated from January 2016 to December 2023. Each day a short option position is opened and returns recorded daily through expiration.
+            Quotes and greek caluclations are as of 3:45 PM EST each trading day with data provided by CBOE.  
+        </p>
+        <h3>Benchmark</h3>
+        <p> Performance will be compared to 100 shares of SPY over the same period. 
+            A ratio of average daily P/L to standard deviation of daily P/L will be used to quantify risk-adjusted returns. 
+        </p>
+        <img class="size-2 enlargeable" src="assets/upspy.png">  
+        <h3>Options</h3>
+        <p> Selling the one standard deviation put and holding through expiration would have been a high probability of success trade with a higher percentage of positive days compared to long stock; however,
+            compared to the underlying itself, selling puts underperformed on a risk-adjusted basis. 
+        </p>
+        <img class="size-2 enlargeable" src="assets/uphte.png">    
+        <h2>Improving Expected Return and Standard Deviation of Returns</h2>
+        <h3>Active Management</h3>
+        <p> Closing positions at predefined profit targets and loss thresholds based on credit received resulted in better risk-adjusted returns than holding through expiration and the benchmark. 
+            Positions that did not reach a profit target or loss theshold were held through expiration.
+            Profit targets tested were 33%, 50%, and 67% credit received. Loss thresholds tested were 1x, 2x, and 3x credit received.
+        </p>
+        <img class="size-2 enlargeable" src="assets/upall.png">    
+        <h3>Conclusion</h3>
+        <p> Selling the one standard deviation put had a high likelihood of success and positive expected return; however, positions held through expiration underperformed the benchmark. 
+            Positions actively managed before expiration based on credit received outperformed unmanaged positions and the benchmark on a risk-adjusted basis.
+        </p> 
+        <h3>Considerations</h3>
+        <p> This is not financial advice. Past performance is not an indicator of future results. 
+            Slippage not accounted for and trading fees not included. Risk of early exercise disregarded.
+        </p>
+        <div id="overlay" class="overlay">
+            <img id="enlargedImage" src="" alt="Enlarged Image">
+        </div>
+    </article>
+
+    <script src="app.js"></script>
+</body>
+</html>
