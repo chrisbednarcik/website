@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Bednarcik</title>
+    <link rel="stylesheet" href="blog-styles.css"> <!-- Link to your CSS file for styling -->
+    <!-- Add any CSS links or stylesheets here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Nav -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" id="navbar__logo"><img src="assets/logo-no-background.png" alt="Icon"></a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="about.html" class="navbar__links">About</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="directory.html" class="navbar__links">Work</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <article>
+        <h1>Monthly SPY Standard Deviation Move</h1>
+        <h2>Visualizing Volatility Expectations Using Options</h2>
+        <h3>Introduction</h3>
+        <p> In this article, we visualize historical expectations and realized outcomes of the 30 day "expected move" in SPY using options.
+        </p>
+        <h3>Methodology</h3>
+        <p> Data is collected each day from January 2016 to December 2023 for options closest to 30 days to expiration.
+            The put and call options are plotted and tracked to determine if they are touched before expiration or expire in the money.
+            Quotes and greek caluclations are as of 3:45 PM EST each trading day.
+        </p>
+        <h3>Visualization</h3>
+        <p> Each day the the 16 delta put and call closest to 30 days to expiration are plotted at their expiration date. Previously plotted points are colored yellow if 
+            they begin trading in the money, and red if they expire in the money. The resulting graph provides a visual representation of the particular expected move and realized outcomes.
+        </p> 
+        <img class="size-2 enlargeable" src="assets/animationg3.gif">     
+        <div id="overlay" class="overlay">
+            <img id="enlargedImage" src="" alt="Enlarged Image">
+        </div>
+    </article>
+
+    <script src="app.js"></script>
+</body>
+</html>
